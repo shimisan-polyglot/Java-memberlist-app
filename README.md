@@ -29,6 +29,7 @@
 
 <img width="1437" alt="社員登録アプリ　ホーム" src="https://user-images.githubusercontent.com/74240481/120427025-22c41880-c3ac-11eb-817f-f5382bb4375c.png">
 
-<img width="1416" alt="社員登録アプリ　登録画面" src="https://user-images.githubusercontent.com/74240481/120424265-fb1e8180-c3a6-11eb-8abb-45d77971c696.png">
+
+<img width="1440" alt="編集画面" src="https://user-images.githubusercontent.com/74240481/120929098-aa01eb00-c722-11eb-99f6-7f77605a5e03.png">
 
 <img width="1417" alt="社員登録アプリ保存、削除画面" src="https://user-images.githubusercontent.com/74240481/120424266-fc4fae80-c3a6-11eb-8c35-2d8517e99206.png">
