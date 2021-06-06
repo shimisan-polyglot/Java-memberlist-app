@@ -19,25 +19,18 @@ import lombok.RequiredArgsConstructor;
 public class EmployeeController {
 
     private final EmployeeRepository repository;
-//以下のrepository.ほにゃららの リポジトリは、全てemployeerepositoryの話です。
-//    まずここでの命令は初めのページに対してリポジトリクラス(employee)の中身を丸ごと渡してあげるという命令です。
+
     @GetMapping("/")
     public String showList(Model model) {
         model.addAttribute("employeedayone", repository.findAll());
         return "index";
     }
-//今度はここには、employeeに追加される情報の設定をするので、リポジトリではなく、
-//    employeeのコントローラークラスを渡しています。
-//    Employeeの右の名前なんでもよい htmlに影響しない
-    
-//    サイドバーの登録ボタンが押された際に遷移して、formというhtmlファイルを返す処理(その中にmodelクラスがふくまれている
-    
+
     @GetMapping("/add")
     public String addEmployee(@ModelAttribute Employee employeehozon) {
         return "form";
     }
-//ここのプロセスのemployeeの右の名前もなんでもよい
-//    フォームが入力されたのちに、その値をモデルクラスに遷移する。処理
+
     @PostMapping("/process")
     public String process(@Validated @ModelAttribute Employee employeekatei,
             BindingResult result) {
@@ -49,8 +42,7 @@ public class EmployeeController {
         return "redirect:/";
     }
 
-//    
-//    
+   
     @GetMapping("/edit/{id}")
     public String editEmployee(@PathVariable Long id, Model model) {
         model.addAttribute("employee", repository.findById(id));
@@ -58,13 +50,14 @@ public class EmployeeController {
     }
     
     
-//フォームで設定するリンク情報
+
     @GetMapping("/delete/{id}")
-//    URLで受け取るパラメーターの型情報をPathVariableで記述します。
+
     public String deleteEmployee(@PathVariable Long id) {
-//    	受け取った値に対して、削除処理をおこないます。
+
         repository.deleteById(id);
-// 削除処理を終えて、トップページに帰りますよーという処理。
+
         return "redirect:/";
     }
 }
+
