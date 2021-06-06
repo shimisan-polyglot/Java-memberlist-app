@@ -1,25 +1,14 @@
-<!--ここでやっているのは、他のhtmlにつながるベースの処理です  -->
-<!--ここでは、ヘッダーをつくっていまーす  -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-
   <th:block th:fragment="header">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>情報管理アプリ</title>
-
-    <!-- These are required CSS -->
-    <!--リンク情報を貼って、使いたいcssのファイルをとってきている処理  -->
     <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.min.css}">
-    <link rel="stylesheet" th:href="@{/webjars/startbootstrap-sb-admin-2/css/sb-admin-2.min.css}">
-  </th:block>
+    <link rel="stylesheet" th:href="@{/webjars/startbootstrap-sb-admin-2/css/sb-admin-2.min.css}"> </th:block>
 </head>
 <body>
-
-  <!-- These are required JS -->
-   <!--リンク情報を貼って、使いたいjsのファイルをとってきている処理   -->
-   <!--js=javascriptのことで、ここでは動きのあるパーツの元になるデータをリンク先からとってきてます  -->
   <th:block th:fragment="scripts">
     <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
